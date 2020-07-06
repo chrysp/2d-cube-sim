@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="2D Rubik's Cube Simulation">
+    <title>chrysp | 2D Rubik's Cube Simulation</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body onkeydown="keys(event.keyCode)">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col">
+                <h1><a href="https://chrysp.github.io">chrysp</a></h1>
+            </div>
+            <div class="col text-right">
+                <a href="https://github.com/chrysp/2d-cube-sim" title="View source code on GitHub" target="_blank">
+                    <img src="GitHub-Mark-32px.png">
+                    view source code
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>2D Rubik's Cube Simulation</h2>
+                <p>Interactive two-dimensional Rubik's Cube - <a
+                        href="https://en.wikipedia.org/wiki/Rubik%27s_Cube#Move_notation" target="_blank">Standard Move
+                        Notation</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Controls</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="resetAndScramble()">Scramble (1
+                    key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="resetCube()">Reset (2 key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="zoomOut()">Zoom Out (3 key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="zoomIn()">Zoom In (4 key)</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="U()">U (j key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Ui()">U' (f key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="D()">D (s key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Di()">D' (l key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="L()">L (d key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Li()">L' (e key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="R()">R (i key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Ri()">R' (k key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="F()">F (h key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Fi()">F' (g key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="B()">B (w key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Bi()">B' (o key)</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="M()">M (n key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Mi()">M' (m key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="E()">E (v key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Ei()">E' (b key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="S()">S (x key)</button>
+                <button type="button" class="btn btn-primary btn-sm my-1" onclick="Si()">S' (c key)</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Display</h3>
+                <canvas id="canvasElement" width="421" height="558">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+            </div>
+            <div class="col">
+                <h3>Move Log</h3>
+                <textarea id="textareaElement" class="p-3 mb-2 bg-light text-dark" rows="22" cols="50"
+                    readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="2d-cube-simulation.js"></script>
+</body>
+
+</html>
